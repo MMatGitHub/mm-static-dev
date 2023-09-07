@@ -1,5 +1,5 @@
 
- function json2Table(json) {
+ export function json2Table(json) {
   let cols = Object.keys(json[0]);
 
 
@@ -28,7 +28,7 @@
   return js_table;
 }
 
-const beispieldaten =[{
+export const beispieldaten =[{
   "first_name": "Toast",
   "last_name": "Follie",
   "company": "Ausbeuters"
@@ -42,5 +42,3 @@ const beispieldaten =[{
   "company": "Hü & Hott & Co"
 }]
 
-let ausgabe = document.getElementById('messwerttabellenausgabe')
-ausgabe.innerHTML = json2Table(beispieldaten)
