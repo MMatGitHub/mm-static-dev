@@ -1,16 +1,11 @@
-export function einspluseins() {
-  return 2;
-}
 
-export function json2Table() {
-  let json = beispieldaten;
-  let cols = Object.keys(json[0]);
+export function json2Table(json_daten) {
+  let cols = Object.keys(json_daten[0]);
 
   //Map over columns, make headers,join into string
-  let headerRow = cols.map((col) => `<th>${col}</th>`).join('');
+  let headerRow = cols.map((col) => "<th>"+`${col}`+"</th>").join('');
 
-  let rows = json
-    .map((row) => {
+  let rows = json_daten.map((row) => {
       let tds = cols.map((col) => `<td>${row[col]}</td>`).join('');
       return `<tr>${tds}</tr>`;
     })
@@ -28,23 +23,5 @@ export function json2Table() {
 
   return js_table;
 }
-
-const beispieldaten = [
-  {
-    first_name: 'Toast',
-    last_name: 'Follie',
-    company: 'Ausbeuters',
-  },
-  {
-    first_name: 'Töff',
-    last_name: 'Deller',
-    company: 'Bullshieter',
-  },
-  {
-    first_name: 'Osteria',
-    last_name: 'Italia',
-    company: 'Hü & Hott & Co',
-  },
-];
 
 export default json2Table;
