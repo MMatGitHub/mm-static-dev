@@ -1,3 +1,4 @@
+//import './tabelle.css';
 
 export function json2Table(json_daten) {
   let cols = Object.keys(json_daten[0]);
@@ -12,7 +13,7 @@ export function json2Table(json_daten) {
     .join('');
 
   const js_table = `
-	<table>
+	<table class="w3-table">
 		<thead>
 			<tr>${headerRow}</tr>
 		<thead>
