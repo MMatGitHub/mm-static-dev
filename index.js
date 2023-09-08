@@ -1,4 +1,5 @@
 import './mm.css';
+import './js/mie/tabelle.css';
 import { version, name } from './package.json';
 import { json2Table } from './js/mie/messwertetabelle.js';
 import { beispieldaten, messwerte_as_json_obj} from './js/mie/messwerte.js'
@@ -10,7 +11,8 @@ addKopfzeile();
 addHier('app_author', gibMirEinUnformatiertesElement("p", "Author: Duomilia"));
 addHier('app_name', gibMirEinUnformatiertesElement('p', "Appname: "+ name));
 addHier('app_version', gibMirEinUnformatiertesElement('p', "Version: "+ version));
-addHier('messwerttabellenausgabe', gibMirEinUnformatiertesElement('table', json2Table(messwerte_as_json_obj)));
+
+json2Table(messwerte_as_json_obj, 'messwerttabellenausgabe');
 
 function addHier(wo, was){
   let test = document.getElementById(wo);
