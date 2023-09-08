@@ -1,5 +1,3 @@
-import './tabelle.css';
-
 function sehr_alt_json2Table(json_daten) {
   let cols = Object.keys(json_daten[0]);
 
