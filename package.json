@@ -2,5 +2,8 @@
   "name": "mm-static",
   "version": "0.1.1",
   "private": false,
+  "scripts": {
+    "start": "app.js"
+  },
   "dependencies": {}
 }
